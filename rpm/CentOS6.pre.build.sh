@@ -31,7 +31,8 @@ fi
 if ! [ -f ${BUILDDIR}/SPECS/${LIBEVENT_SPEC_FILE} ] ; then 
     cd ${BUILDDIR}/tmp
     rm -rf ${LIBEVENT_SPEC_DIR}
-    svn export ${LIBEVENTSPEC_SVN_URL} ${LIBEVENT_SPEC_DIR}
+    #svn export ${LIBEVENTSPEC_SVN_URL} ${LIBEVENT_SPEC_DIR}
+    cp -r ${CPWD}/${LIBEVENT_SPEC_DIR} ${LIBEVENT_SPEC_DIR}
     ER=$?
     if ! [ ${ER} -eq 0 ] ; then
 	cd ${CPWD}
